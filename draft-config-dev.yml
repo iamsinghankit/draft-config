@@ -7,7 +7,7 @@ app:
 api:
   data:
     port: 9191
-    baseUrl: ${app.protocol}://${app.host}:${api.data.port}
+    baseUrl: ${app.protocol}://${app.host}:${api.data.port}xx
 #     prefix: ${app.protocol}://${app.host}:${api.data.port}/data/
     user: ${api.data.baseUrl}/data/${app.version}/users
     userByEmail: /email
