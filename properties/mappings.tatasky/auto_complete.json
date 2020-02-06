@@ -1,0 +1,165 @@
+{
+  "dynamic": "strict",
+  "enabled": true,
+  "properties": {
+    "id": {
+      "type": "text"
+    },
+    "contentType": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "text"
+        },
+        "subCategory": {
+          "type": "text"
+        }
+      }
+    },
+    "vodId": {
+      "type": "long"
+    },
+    "seriesId": {
+      "type": "long"
+    },
+    "channelId": {
+      "type": "long"
+    },
+    "brandId": {
+      "type": "long"
+
+    },
+    "epgId": {
+      "type": "long"
+    },
+    "titleLong": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "text",
+          "analyzer": "standard",
+          "fields": {
+            "stem": {
+              "type": "text",
+              "analyzer": "stem_analyzer"
+            }
+          }
+        },
+        "hi": {
+          "type": "text",
+          "analyzer": "standard",
+          "fields": {
+            "stem": {
+              "type": "text",
+              "analyzer": "stem_analyzer"
+            }
+          }
+        }
+      }
+    },
+    "summaryLong": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "text",
+          "analyzer": "standard",
+          "fields": {
+            "stem": {
+              "type": "text",
+              "analyzer": "stem_analyzer"
+            }
+          }
+        },
+        "hi": {
+          "type": "text",
+          "analyzer": "standard",
+          "fields": {
+            "stem": {
+              "type": "text",
+              "analyzer": "stem_analyzer"
+            }
+          }
+        }
+      }
+    },
+    "genres": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "long"
+        },
+        "title": {
+          "type": "object",
+          "properties": {
+            "en": {
+              "type": "text",
+              "analyzer": "whitespace",
+              "fields": {
+                "keyword": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "hi": {
+              "type": "text",
+              "analyzer": "whitespace",
+              "fields": {
+                "keyword": {
+                  "type": "keyword"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "languages": {
+      "type": "text",
+      "analyzer": "standard",
+      "fields": {
+        "keyword": {
+          "type": "keyword"
+        }
+      }
+    },
+    "contributorsNested": {
+      "type": "keyword"
+    },
+    "provider": {
+      "type": "text"
+    },
+    "allowedOnBrowsers": {
+      "type": "boolean"
+    },
+    "allowedOnMobile": {
+      "type": "boolean"
+    },
+    "allowedOnDongle": {
+      "type": "boolean"
+    },
+    "allowedOnATV": {
+      "type": "boolean"
+    },
+    "boxCoverImage": {
+      "type": "keyword"
+    },
+    "posterImage": {
+      "type": "keyword"
+    },
+    "thumbnailImage": {
+      "type": "keyword"
+    },
+    "suggestTitle": {
+      "type": "completion"
+    },
+    "suggestGenre": {
+      "type": "completion"
+    },
+    "suggestLanguage": {
+      "type": "completion"
+    },
+    "suggestActor": {
+      "type": "completion"
+    }
+  }
+}
