@@ -1,0 +1,20 @@
+app:
+  protocol: http
+  host: 127.0.0.1
+  version: v1
+
+
+api:
+  data:
+    port: 9192
+    baseUrl: ${app.protocol}://${app.host}:${api.data.port}xx
+#     prefix: ${app.protocol}://${app.host}:${api.data.port}/data/
+    user: ${api.data.baseUrl}/data/${app.version}/users
+    userByEmail: /email
+  
+  
+  user:
+    port: 8181
+    baseUrl: ${app.protocol}://${app.host}:${api.user.port}
+    login: ${api.user.baseUrl}/user/${app.version}/login
+    doLoginUrl: /dologin
