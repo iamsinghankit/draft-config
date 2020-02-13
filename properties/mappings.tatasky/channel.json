@@ -1,0 +1,262 @@
+{
+  "dynamic": "strict",
+  "enabled": false,
+  "properties": {
+    "id": {
+      "type": "long"
+    },
+    "mmLiveChannelId": {
+      "type": "keyword"
+    },
+    "titleSortName": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "keyword",
+          "index": false
+        },
+        "hi": {
+          "type": "keyword",
+          "index": false
+        }
+      }
+    },
+    "titleBrief": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "keyword",
+          "index": false
+        },
+        "hi": {
+          "type": "keyword",
+          "index": false
+        }
+      }
+    },
+    "titleMedium": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "keyword",
+          "index": false
+        },
+        "hi": {
+          "type": "keyword",
+          "index": false
+        }
+      }
+    },
+    "titleLong": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "text",
+          "fields": {
+            "stem": {
+              "type": "text",
+              "analyzer": "stem_analyzer"
+            }
+          }
+        },
+        "hi": {
+          "type": "text",
+          "analyzer": "standard_analyzer",
+          "fields": {
+            "stem": {
+              "type": "text",
+              "analyzer": "stem_analyzer"
+            }
+          }
+        }
+      }
+    },
+    "summaryShort": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "keyword",
+          "index": false
+        },
+        "hi": {
+          "type": "keyword",
+          "index": false
+        }
+      }
+    },
+    "summaryMedium": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "keyword",
+          "index": false
+        },
+        "hi": {
+          "type": "keyword",
+          "index": false
+        }
+      }
+    },
+    "summaryLong": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "text",
+          "analyzer": "whitespace_analyzer",
+          "fields": {
+            "stem": {
+              "type": "text",
+              "analyzer": "stem_analyzer"
+            }
+          }
+        },
+        "hi": {
+          "type": "text",
+          "analyzer": "whitespace_analyzer",
+          "fields": {
+            "stem": {
+              "type": "text",
+              "analyzer": "stem_analyzer"
+            }
+          }
+        }
+      }
+    },
+    "channelId": {
+      "type": "keyword"
+    },
+    "broadcastServiceId": {
+      "type": "keyword",
+      "fields": {
+        "int": {
+          "type": "integer"
+        }
+      }
+    },
+    "boxCoverImage": {
+      "type": "keyword"
+    },
+    "posterImage": {
+      "type": "keyword"
+    },
+    "thumbnailImage": {
+      "type": "keyword"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "hd": {
+      "type": "boolean"
+    },
+    "showType": {
+      "type": "keyword"
+    },
+    "freeChannel": {
+      "type": "boolean"
+    },
+    "ott": {
+      "type": "boolean"
+    },
+    "allowedOnBrowser": {
+      "type": "boolean"
+    },
+    "allowedOnMobile": {
+      "type": "boolean"
+    },
+    "allowedOnDongle": {
+      "type": "boolean"
+    },
+    "allowedOnATV": {
+      "type": "boolean"
+    },
+    "keywords": {
+      "type": "text",
+      "analyzer": "whitespace_analyzer"
+    },
+    "voiceKeywords": {
+      "type": "text"
+    },
+    "languages": {
+      "type": "text",
+      "analyzer": "standard_analyzer",
+      "fields": {
+        "keyword": {
+          "type": "keyword"
+        }
+      }
+    },
+    "packageEntitlementIds": {
+      "type": "keyword"
+    },
+    "contractName": {
+      "type": "keyword"
+    },
+    "genres": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "long"
+        },
+        "title": {
+          "type": "object",
+          "properties": {
+            "en": {
+              "type": "text",
+              "analyzer": "whitespace_analyzer",
+              "fields": {
+                "keyword": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "hi": {
+              "type": "text",
+              "analyzer": "whitespace_analyzer",
+              "fields": {
+                "keyword": {
+                  "type": "keyword"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "categories": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "long"
+        },
+        "title": {
+          "type": "object",
+          "properties": {
+            "en": {
+              "type": "keyword",
+              "index": false
+            },
+            "hi": {
+              "type": "keyword",
+              "index": false
+            }
+          }
+        }
+      }
+    },
+    "displayOrder": {
+      "type": "integer"
+    },
+    "catchupChannel": {
+      "type": "boolean"
+    },
+    "provider": {
+      "type": "keyword"
+    },
+    "catchupChannel": {
+      "type": "boolean"
+    },
+    "dvbTriplet": {
+      "type": "keyword"
+    }
+  }
+}
