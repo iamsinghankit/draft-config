@@ -1,0 +1,50 @@
+{ "suggest": {
+  "suggest-title" : {
+    "prefix" : "%s",
+    "completion" : {
+      "field" : "suggestTitle",
+      "size": 10,
+      "skip_duplicates": true,
+      "fuzzy" : {
+        "fuzziness" : 1
+
+      }
+    }
+  },
+  "suggest-genre" : {
+    "prefix" : "%s",
+    "completion" : {
+      "field" : "suggestGenre",
+      "size": 10,
+      "skip_duplicates": true,
+      "fuzzy" : {
+        "fuzziness" : 1
+
+      }
+    }
+  },
+  "suggest-actor" : {
+    "prefix" : "%s",
+    "completion" : {
+      "field" : "suggestActor",
+      "size": 10,
+      "skip_duplicates": true,
+      "fuzzy" : {
+        "fuzziness" : 1
+
+      }
+    }
+  },
+  "suggest-langauge" : {
+    "prefix" : "%s",
+    "completion" : {
+      "field" : "suggestLanguage",
+      "size": 10,
+      "skip_duplicates": true,
+      "fuzzy" : {
+        "fuzziness" : 1
+      }
+    }
+  }
+}
+}
