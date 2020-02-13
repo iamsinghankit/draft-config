@@ -1,5 +1,5 @@
 {
-  "dynamic": "strict",
+  "dynamic": "stricts",
   "enabled": true,
   "properties": {
     "id": {
