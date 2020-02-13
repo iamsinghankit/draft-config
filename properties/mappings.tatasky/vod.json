@@ -1,0 +1,324 @@
+{
+  "dynamic": "strict",
+  "enabled": false,
+  "properties": {
+    "id": {
+      "type": "long"
+    },
+    "mmVODId": {
+      "type": "keyword"
+    },
+    "titleBrief": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "keyword",
+          "index": false
+        },
+        "hi": {
+          "type": "keyword",
+          "index": false
+        }
+      }
+    },
+    "titleMedium": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "keyword",
+          "index": false
+        },
+        "hi": {
+          "type": "keyword",
+          "index": false
+        }
+      }
+    },
+    "titleLong": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "text",
+          "fields": {
+            "stem": {
+              "type": "text",
+              "analyzer": "stem_analyzer"
+            }
+          }
+        },
+        "hi": {
+          "type": "text",
+          "analyzer": "standard_analyzer",
+          "fields": {
+            "stem": {
+              "type": "text",
+              "analyzer": "stem_analyzer"
+            }
+          }
+        }
+      }
+    },
+    "titleSortName": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "keyword",
+          "index": false
+        },
+        "hi": {
+          "type": "keyword",
+          "index": false
+        }
+      }
+    },
+    "summaryShort": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "keyword",
+          "index": false
+        },
+        "hi": {
+          "type": "keyword",
+          "index": false
+        }
+      }
+    },
+    "summaryMedium": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "keyword",
+          "index": false
+        },
+        "hi": {
+          "type": "keyword",
+          "index": false
+        }
+      }
+    },
+    "summaryLong": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "text",
+          "analyzer": "whitespace_analyzer",
+          "fields": {
+            "stem": {
+              "type": "text",
+              "analyzer": "stem_analyzer"
+            }
+          }
+        },
+        "hi": {
+          "type": "text",
+          "analyzer": "whitespace_analyzer",
+          "fields": {
+            "stem": {
+              "type": "text",
+              "analyzer": "stem_analyzer"
+            }
+          }
+        }
+      }
+    },
+    "genres": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "long"
+        },
+        "title": {
+          "type": "object",
+          "properties": {
+            "en": {
+              "type": "text",
+              "analyzer": "whitespace_analyzer",
+              "fields": {
+                "keyword": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "hi": {
+              "type": "text",
+              "analyzer": "whitespace_analyzer"
+            }
+          }
+        }
+      }
+    },
+    "contributors": {
+      "type": "object",
+      "properties": {
+        "contribution": {
+          "type": "text"
+        },
+        "fullName": {
+          "type": "object",
+          "properties": {
+            "en": {
+              "type": "text",
+              "analyzer": "whitespace_analyzer"
+            },
+            "hi": {
+              "type": "text",
+              "analyzer": "whitespace_analyzer"
+            }
+          }
+        }
+      }
+    },
+    "contributorsNested": {
+      "type": "nested",
+      "properties": {
+        "contribution": {
+          "type": "text"
+        },
+        "fullName": {
+          "type": "object",
+          "properties": {
+            "en": {
+              "type": "text",
+              "analyzer": "whitespace_analyzer"
+            },
+            "hi": {
+              "type": "text",
+              "analyzer": "standard_analyzer"
+            }
+          }
+        }
+      }
+    },
+    "keywords": {
+      "type": "text"
+    },
+    "boxCoverImage": {
+      "type": "keyword"
+    },
+    "posterImage": {
+      "type": "keyword"
+    },
+    "showType": {
+      "type": "keyword"
+    },
+    "yearOfRelease": {
+      "type": "integer"
+    },
+    "startDateTime": {
+      "type": "date"
+    },
+    "endDateTime": {
+      "type": "date"
+    },
+    "displayRunTime": {
+      "type": "keyword"
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "downloadable": {
+      "type": "boolean"
+    },
+    "packageEntitlementIds": {
+      "type": "keyword"
+    },
+    "contractName": {
+      "type": "keyword"
+    },
+    "languages": {
+      "type": "text",
+      "analyzer": "standard_analyzer",
+      "fields": {
+        "keyword": {
+          "type": "keyword"
+        }
+      }
+    },
+    "rating": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "long"
+        },
+        "ratingType": {
+          "type": "keyword"
+        }
+      }
+    },
+    "categories": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "long"
+        },
+        "title": {
+          "type": "object",
+          "properties": {
+            "en": {
+              "type": "keyword",
+              "index": false
+            },
+            "hi": {
+              "type": "keyword",
+              "index": false
+            }
+          }
+        }
+      }
+    },
+    "hd": {
+      "type": "boolean"
+    },
+    "brand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "long"
+        }
+      }
+    },
+    "series": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "long"
+        },
+        "season": {
+          "type": "integer"
+        }
+      }
+    },
+    "episodeId": {
+      "type": "keyword"
+    },
+    "allowedOnBrowser": {
+      "type": "boolean"
+    },
+    "allowedOnMobile": {
+      "type": "boolean"
+    },
+    "allowedOnDongle": {
+      "type": "boolean"
+    },
+    "allowedOnATV": {
+      "type": "boolean"
+    },
+    "provider": {
+      "type": "keyword"
+    },
+    "contentCategoryType": {
+      "type": "keyword"
+    },
+    "manualIngested": {
+      "type": "boolean"
+    },
+    "normalIngestion": {
+      "type": "boolean"
+    },
+    "rentalPrice": {
+      "type": "scaled_float",
+      "scaling_factor": 100
+    }
+  }
+}
