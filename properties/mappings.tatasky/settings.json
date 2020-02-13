@@ -1,0 +1,41 @@
+{
+    "analysis": {
+      "analyzer": {
+        "stem_stop_analyzer": {
+          "type": "custom",
+          "filter": [
+            "stop",
+            "lowercase",
+            "asciifolding",
+            "kstem"
+          ],
+          "tokenizer": "standard"
+        },
+        "stem_analyzer": {
+          "type": "custom",
+          "filter": [
+            "lowercase",
+            "asciifolding",
+            "kstem"
+          ],
+          "tokenizer": "standard"
+        },
+        "standard_analyzer": {
+          "type": "custom",
+          "filter": [
+            "lowercase",
+            "asciifolding"
+          ],
+          "tokenizer": "standard"
+        },
+        "whitespace_analyzer": {
+          "type": "custom",
+          "filter": [
+            "lowercase",
+            "asciifolding"
+          ],
+          "tokenizer": "whitespace"
+        }
+      }
+    }
+  }
