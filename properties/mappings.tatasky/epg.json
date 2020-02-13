@@ -1,0 +1,385 @@
+{
+  "dynamic": "strict",
+  "enabled": false,
+  "properties": {
+    "id": {
+      "type": "long"
+    },
+    "mmEpgId": {
+      "type": "keyword"
+    },
+    "titleBrief": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "keyword",
+          "index": false
+        },
+        "hi": {
+          "type": "keyword",
+          "index": false
+        }
+      }
+    },
+    "titleMedium": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "keyword",
+          "index": false
+        },
+        "hi": {
+          "type": "keyword",
+          "index": false
+        }
+      }
+    },
+    "titleLong": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "text",
+          "fields": {
+            "keyword_type": {
+              "type": "keyword"
+            },
+            "stem": {
+              "type": "text",
+              "analyzer": "stem_analyzer"
+            }
+          }
+        },
+        "hi": {
+          "type": "text",
+          "analyzer": "standard_analyzer",
+          "fields": {
+            "stem": {
+              "type": "text",
+              "analyzer": "stem_analyzer"
+            }
+          }
+        }
+      }
+    },
+    "episodeName": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "keyword",
+          "index": false
+        },
+        "hi": {
+          "type": "keyword",
+          "index": false
+        }
+      }
+    },
+    "summaryShort": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "keyword",
+          "index": false
+        },
+        "hi": {
+          "type": "keyword",
+          "index": false
+        }
+      }
+    },
+    "summaryMedium": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "keyword",
+          "index": false
+        },
+        "hi": {
+          "type": "keyword",
+          "index": false
+        }
+      }
+    },
+    "summaryLong": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "text",
+          "analyzer": "whitespace_analyzer",
+          "fields": {
+            "stem": {
+              "type": "text",
+              "analyzer": "stem_analyzer"
+            }
+          }
+        },
+        "hi": {
+          "type": "text",
+          "analyzer": "whitespace_analyzer",
+          "fields": {
+            "stem": {
+              "type": "text",
+              "analyzer": "stem_analyzer"
+            }
+          }
+        }
+      }
+    },
+    "genres": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "long"
+        },
+        "title": {
+          "type": "object",
+          "properties": {
+            "en": {
+              "type": "text",
+              "analyzer": "whitespace_analyzer",
+              "fields": {
+                "keyword": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "hi": {
+              "type": "text",
+              "analyzer": "whitespace_analyzer"
+            }
+          }
+        }
+      }
+    },
+    "packageEntitlementIds": {
+      "type": "keyword"
+    },
+    "contractName": {
+      "type": "keyword"
+    },
+    "keywords": {
+      "type": "text",
+      "analyzer": "whitespace_analyzer"
+    },
+    "imageUrl": {
+      "type": "keyword"
+    },
+    "catchupImageUrl": {
+      "type": "keyword"
+    },
+    "epgState": {
+      "type": "keyword"
+    },
+    "showType": {
+      "type": "keyword"
+    },
+    "channel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "keyword"
+        },
+        "mmLiveChannelId": {
+          "type": "keyword"
+        },
+        "channelId": {
+          "type": "keyword"
+        },
+        "boxCoverImage": {
+          "type": "keyword"
+        },
+        "thumbnailImage": {
+          "type": "keyword"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "ott": {
+          "type": "boolean"
+        },
+        "allowedOnBrowser": {
+          "type": "boolean"
+        },
+        "allowedOnMobile": {
+          "type": "boolean"
+        },
+        "allowedOnDongle": {
+          "type": "boolean"
+        },
+        "allowedOnATV": {
+          "type": "boolean"
+        },
+        "dvbTriplet": {
+          "type": "keyword"
+        },
+        "genres": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "long"
+            },
+            "title": {
+              "type": "object",
+              "properties": {
+                "en": {
+                  "type": "keyword",
+                  "index": true
+                },
+                "hi": {
+                  "type": "keyword",
+                  "index": true
+                }
+              }
+            }
+          }
+        },
+        "title": {
+          "type": "object",
+          "properties": {
+            "en": {
+              "type": "text",
+              "analyzer": "whitespace_analyzer",
+              "fields": {
+                "keyword": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "hi": {
+              "type": "text",
+              "analyzer": "standard_analyzer"
+            }
+          }
+        }
+      }
+    },
+    "episodeId": {
+      "type": "keyword"
+    },
+    "isCatchup": {
+      "type": "boolean"
+    },
+    "ott": {
+      "type": "boolean"
+    },
+    "isStbEnabled": {
+      "type": "boolean"
+    },
+    "languages": {
+      "type": "text",
+      "analyzer": "standard_analyzer",
+      "fields": {
+        "keyword": {
+          "type": "keyword"
+        }
+      }
+    },
+    "contributors": {
+      "type": "object",
+      "properties": {
+        "contribution": {
+          "type": "text"
+        },
+        "fullName": {
+          "type": "object",
+          "properties": {
+            "en": {
+              "type": "text",
+              "analyzer": "whitespace_analyzer"
+            },
+            "hi": {
+              "type": "text",
+              "analyzer": "standard_analyzer"
+            }
+          }
+        }
+      }
+    },
+    "contributorsNested": {
+      "type": "nested",
+      "properties": {
+        "contribution": {
+          "type": "text"
+        },
+        "fullName": {
+          "type": "object",
+          "properties": {
+            "en": {
+              "type": "text",
+              "analyzer": "whitespace_analyzer"
+            },
+            "hi": {
+              "type": "text",
+              "analyzer": "standard_analyzer"
+            }
+          }
+        }
+      }
+    },
+    "date": {
+      "type": "date"
+    },
+    "startDateTime": {
+      "type": "date"
+    },
+    "endDateTime": {
+      "type": "date"
+    },
+    "linearBroadcastStartDate": {
+      "type": "date"
+    },
+    "linearBroadcastEndDate": {
+      "type": "date"
+    },
+    "onNow": {
+      "type": "boolean"
+    },
+    "rating": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "long"
+        },
+        "ratingType": {
+          "type": "text"
+        }
+      }
+    },
+    "categories": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "long"
+        },
+        "title": {
+          "type": "object",
+          "properties": {
+            "en": {
+              "type": "keyword",
+              "index": false
+            },
+            "hi": {
+              "type": "keyword",
+              "index": false
+            }
+          }
+        }
+      }
+    },
+    "seriesId": {
+      "type": "keyword"
+    },
+    "provider": {
+      "type": "keyword"
+    },
+    "epgSlotId": {
+      "type": "keyword"
+    },
+    "eventId": {
+      "type": "long"
+    },
+    "serviceId": {
+      "type": "long"
+    }
+  }
+}
